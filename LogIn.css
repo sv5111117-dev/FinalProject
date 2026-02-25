@@ -1,0 +1,150 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* logo */
+.logo {
+  text-align: left;      /* Center the image */
+  padding: 20px;
+  margin-left: 5rem;
+  height: 35rem;
+}
+
+.logo h2 {
+  color: rgb(255, 255, 255);
+  text-align: right;
+  font-size: 2rem;
+     
+}
+
+
+
+.logo h1 {
+    color: white;
+    text-align: right;
+    margin-right: 10rem;
+}
+
+.logo img {
+  width: 150px;            /* Resize image */
+  height: auto;            /* Keep proportions */
+}
+
+/* Page background */
+/* Page background with fade effect */
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    /* Fading background image */
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgb(61, 61, 61), rgba(255, 255, 255, 0.7)),
+        url("635552285_26525890330330385_7272663754134562689_n.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo h1, .logo h2 {
+    color: white;
+    text-align: right;
+    animation: fadeIn 1s ease-in forwards; /* applies fade animation */
+}
+
+/* Keyframes for fade effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); } /* start invisible, slightly lower */
+    100% { opacity: 1; transform: translateY(0); }  /* end fully visible at normal position */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); 
+}
+
+p, .link {
+    margin-top: 10px;
+    text-align: center;
+    color: gray;
+    font-size: clamp(14px, 2vw, 18px); 
+    line-height: 1.5;
+}
+
+/* Responsive Login box */
+.container {
+    width: 40%;
+    max-width: 450px;
+    height: 35rem;
+    max-height: 100%;
+    padding: clamp(20px, 5vw, 40px);
+    background: #07daff;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(74, 144, 226, 0.4);
+    margin-left: 250px;
+}
+
+/* Input fields */
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 16px;
+}
+
+/* Buttons Styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5a096a;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #c364eb;  /* lighter/purple on hover */
+    transform: scale(1.05); /* slight grow effect */
+}
+
+button#back {
+    background-color: #333;
+}
+
+button#reset {
+    background-color: darkseagreen;
+}
+
+button#reset:hover {
+    background: #e74c3c;
+}
+
+/* Small adjustments for very small phones */
+@media (max-width: 380px) {
+    .container {
+        padding: 15px;
+    }
+}
